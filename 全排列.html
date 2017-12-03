@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style type="text/css">
+    #box {
+        width: 500px;
+        height: 500px;
+        background-color: skyblue
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div id="test">asd sa d</div>
+</body>
+<script type="text/javascript">
+    function permutations(string) {
+        if(string.length == 1){
+            return [string]
+        }else{
+            return string.split('').map(
+            (e, i) => permutations(string.slice(0, i) + string.slice(i + 1)).map((e2) => e + e2)
+        ).reduce((r, e) => r.concat(e)).sort().filter((e, i, a) => (i == 0) || a[i - 1] != e);
+        }
+    }
+    var s = permutations('2233')
+    console.log(s)
+</script>
+
+</html>
