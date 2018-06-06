@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="video_container">
+    <video controls width=1000 preload poster=assets/poster.jpg>
+      <source src="http://nettuts.s3.amazonaws.com/763_sammyJSIntro/trailer_test.mp4" type="video/mp4">
+      <source src="http://nettuts.s3.amazonaws.com/763_sammyJSIntro/trailer_test.ogg" type="video/ogg">
+      <!-- FALLBACK HERE -->
+    </video>
+
+    <div id="videoControls">
+      <button id="play" title="Play"> &#x25BA; </button>
+
+      <div id="progress">
+        <div id="progress_box">
+          <span id="play_progress"></span>
+        </div>
+      </div>
+
+      <button id="fullScreen" title="FullScreen Toggle"> FS </button>
+      <a href="http://www.tutsplus.com">
+        <img src="http://tutsplus.s3.amazonaws.com/tutspremium/web-development/103_html5VideoPlayer/images/tuts_logo.png" alt="Tuts"
+          id="video_tutsLogo" />
+      </a>
+    </div>
+  </div>
+</body>
+<script>
+  (function (window, document) {
+    var video = document.getElementsByTagName('video')[0],
+      videoControls = document.getElementById('videoControls'),
+      play = document.getElementById('play'),
+
+      progressContainer = document.getElementById("progress"),
+      progressHolder = document.getElementById("progress_box"),
+      playProgressBar = document.getElementById("play_progress"),
+
+      fullScreenToggleButton = document.getElementById("fullScreen");
+    var videoPlayer = {
+      init: function () {
+        // this is equal to the videoPlayer object. 
+        var that = this;
+
+        // Helpful CSS trigger for JS.  
+        document.documentElement.className = 'js';
+
+        // Get rid of the default controls, because we'll use our own. 
+        video.removeAttribute('controls');
+
+        // When meta data is ready, show the controls 
+        video.addEventListener('loadeddata', this.initializeControls, false);
+      }
+    };
+
+    videoPlayer.init();
+
+  }(this, document))
+</script>
+
+</html>
