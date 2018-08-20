@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #box{
+            /* border: 100px solid red; */
+                border-top-color: red;
+                border-top-style: solid;
+                border-top-width: 100px;
+                border-right-color: red;
+                border-right-style: solid;
+                border-right-width: 100px;
+                border-bottom-color: red;
+                border-bottom-style: solid;
+                border-bottom-width: 100px;
+                border-left-color: red;
+                border-left-style: solid;
+                border-left-width: 100px;
+                border-image-source: initial;
+                border-image-slice: initial;
+                border-image-width: initial;
+                border-image-outset: initial;
+                border-image-repeat: initial;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        萨达所撒旦撒旦asd
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        // function(num)
+        var num = 40
+        var a = '囧'
+        var b = '〇'
+        // 记录坐标
+        var temp = [num - 1, 0]
+        // 展示数据
+        var arrAll = []
+        //初始化数据
+        for (var i = 0; i < num; i++) {
+            arrAll[i] = []
+        }
+        arrAll = arrAll.map(e =>  arrAll.map(() => b))
+        arrAll[0] = arrAll[0].map(e => a)
+        arrAll.forEach(e => {e[num - 1] = a})
+        arrAll[num-1] = arrAll[num - 1].map(e => a)
+        // 方法集合
+        var funArr = {
+            '0': function(){
+                // console.log(temp)
+                for (var i = temp[0]; i > 0; i--) {
+                    if(arrAll[i-2][temp[1]] == a){
+                        temp[0] = i
+                        break
+                    }else{
+                        arrAll[i][temp[1]] = a
+                    }
+                }
+            },
+            '1': function(){
+                // console.log(temp)
+                for (var i = temp[1] ; i < num; i++) {
+                    if(arrAll[temp[0]][i+2] == a){
+                        temp[1] = i
+                        break
+                    }else{
+                        arrAll[temp[0]][i] = a
+                    }
+                }
+            },
+            '2': function(){
+                // console.log(temp)
+                for (var i = temp[0]; i < num; i++) {
+                    if(arrAll[i + 2][temp[1]] == a){
+                        temp[0] = i
+                        break
+                    }else{
+                        arrAll[i][temp[1]] = a
+                    }
+                }
+            },
+            '3':function(){
+                // console.log(temp)
+                for (var i = temp[1]; i > 0; i--) {
+                    if(arrAll[temp[0]][i - 2] == a){
+                        temp[1] = i
+                        break
+                    }else{
+                        arrAll[temp[0]][i] = a
+                    }
+                }
+            }
+        }
+        // 上下左右旋转执行
+        for (var i = 0; i < num; i++) {
+            funArr[i % 4]()
+        }
+        var box = document.getElementById('box')
+        var str = ''
+        // arrAll.forEach(e=>{
+        //     console.log(e)
+        // })
+        arrAll.forEach(e=>{
+            e.forEach(el=>{
+                str+='<span>'+el+'</span>'
+            })
+            str+='<br>'
+        })
+        box.innerHTML = str
+
+
+    </script>
+</body>
+</html> -->
+ 新版提交
+
+ Are you ok ?
