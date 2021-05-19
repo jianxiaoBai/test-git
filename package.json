@@ -1,0 +1,21 @@
+{
+  "name": "test-git",
+  "version": "1.0.0",
+  "description": "asd as asd a asd as asd as",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "echo $npm_package_version -i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianxiaoBai/test-git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianxiaoBai/test-git/issues"
+  },
+  "homepage": "https://github.com/jianxiaoBai/test-git#readme"
+}
