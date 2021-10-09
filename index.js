@@ -153,3 +153,4 @@ scanDir.forEach((dirPath) => {
 // authAPiDeep(JSON.parse(aaa))
 
 authAPiDeep(allDataMap)
+console.log('asd=asd=as=')
