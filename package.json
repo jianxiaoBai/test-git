@@ -19,7 +19,7 @@
   "homepage": "https://github.com/jianxiaoBai/test-git#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"================================================\""
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
