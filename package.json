@@ -19,12 +19,11 @@
   "homepage": "https://github.com/jianxiaoBai/test-git#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "echo \"git commit trigger husky pre-commit hook\""
     }
   },
   "lint-staged": {
-    "src/**/*.{js}": [
-      "eslint --fix",
+    "*.js": [
       "prettier --write"
     ]
   },

@@ -14,7 +14,7 @@ function buildMenuConfig(...args) {
     const fileExtname = path.extname(currentDirPath)
     if (['.ts', '.tsx'].includes(fileExtname)) {
       console.log(currentDirPath, 'currentDirPath');
-      const data = fs.readFileSync(currentDirPath);
+    const data = fs.readFileSync(currentDirPath);
       const apiObj = {};
       const dataResult = data.toString()
         .replace(/\n/g, ' ')
