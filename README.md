@@ -1,3 +1,4 @@
+```js
 const fs = require('fs');
 const path = require('path');
 const allDataMap = {}
@@ -147,3 +148,4 @@ scanDir.forEach(dirPath => {
 // authAPiDeep(JSON.parse(aaa))
 
 authAPiDeep(allDataMap)
+```
