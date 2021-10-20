@@ -1,2 +1,11 @@
-我一会要被移除了...ChannelMergerNode...
-111
+export interface IPaymentPlan {
+  billId: string
+  instalmentNum: number
+  dueDate: number
+  amountDue: number
+  repaidAmount: number
+  paymentTime: number
+  overdueInterest: number
+  overdueFee: number
+  status: string
+}
